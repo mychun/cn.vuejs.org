@@ -128,7 +128,8 @@ Vue.component('base-input', {
   `
 })
 ```
-
+<base-input v-on:focus.native="onFocus"></base-input>这样使用，不会生效
+重新使用<base-input v-on:focus="onFocus"></base-input> 注意：不要在加`.native`，否则不生效，这是为什么？
 现在 `<base-input>` 组件是一个**完全透明的包裹器**了，也就是说它可以完全像一个普通的 `<input>` 元素一样使用了：所有跟它相同的 attribute 和监听器都可以工作。
 
 ## `.sync` 修饰符
